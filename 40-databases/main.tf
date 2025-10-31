@@ -33,7 +33,7 @@ resource "terraform_data" "mongodb" {
   provisioner "remote-exec" {
     inline = [
         "chmod +x /tmp/bootstrap.sh"
-        "sudo sh chmod +x /tmp/bootstrap.sh"
+        "sudo sh /tmp/bootstrap.sh"
     ]
   }
 }
