@@ -92,16 +92,16 @@ resource "aws_instance" "rabbitmq" {
   )
 }
 
-resource "terraform_data" "rebbitmq" {
+resource "terraform_data" "rabbitmq" {
   triggers_replace = [
-    aws_instance.rebbitmq.id
+    aws_instance.rabbitmq.id
   ]
 
   connection {
       type     = "ssh"
       user     = "ec2-user"
       password = "DevOps321"
-      host     = aws_instance.rebbitmq.private_ip
+      host     = aws_instance.rabbitmq.private_ip
   }
 
 # terraform copies this to rabbitmq server
@@ -113,7 +113,7 @@ resource "terraform_data" "rebbitmq" {
   provisioner "remote-exec" {
     inline = [
         "chmod +x /tmp/bootstrap.sh",
-        "sudo sh /tmp/bootstrap.sh rebbitmq"
+        "sudo sh /tmp/bootstrap.sh rabbitmq"
     ]
   }
 }
