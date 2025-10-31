@@ -78,7 +78,7 @@ resource "terraform_data" "redis" {
   }
 }
 
-resource "aws_instance" "rebbitmq" {
+resource "aws_instance" "rabbitmq" {
   ami           = local.ami_id
   instance_type = "t3.micro"
   vpc_security_group_ids = [local.rabbitmq_sg_id]
@@ -87,7 +87,7 @@ resource "aws_instance" "rebbitmq" {
   tags = merge (
     local.common_tags,
     {
-        Name = "${var.project_name}-${var.environment}-rebbitmq"
+        Name = "${var.project_name}-${var.environment}-rabbitmq"
     }
   )
 }
