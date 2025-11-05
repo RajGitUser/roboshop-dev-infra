@@ -13,7 +13,7 @@ REPO_DIR=/opt/roboshop/ansible
 ANSIBLE_DIR=ansible-roboshop-roles-tf
 
 mkdir -p $REPO_DIR
-mkdir -p /var/log/roboshop
+mkdir -p /var/log/roboshop/
 touch ansible.log
 
 cd $REPO_DIR
@@ -27,4 +27,4 @@ else
     cd $ANSIBLE_DIR
 fi
 
-ansible-playbook -e component=$component -e environment=$environment main.yaml
+ansible-playbook -e component=$component -e env=$environment main.yaml
