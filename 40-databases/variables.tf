@@ -28,6 +28,6 @@ variable "zone_id" {
     default = "Z08088429XZJJZMETS6D"
 }
 
-variable "domaine_name" {
+variable "domain_name" {
     default = "rajkumardaws.space" #rajkumardaws.space
 }
