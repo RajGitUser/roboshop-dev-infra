@@ -1,5 +1,5 @@
 resource "aws_lb" "frontend_alb" {
-  name               = "${local.common_name_suffix}-frontend_alb" # roboshop-dev-frontend_alb
+  name               = "${local.common_name_suffix}-frontend-alb" # roboshop-dev-frontend_alb
   internal           = false
   load_balancer_type = "application"
   security_groups    = [local.frontend_alb_sg_id]
@@ -16,7 +16,7 @@ resource "aws_lb" "frontend_alb" {
 }
 
 resource "aws_lb_listener" "frontend_alb" {
-  load_balancer_arn = aws_lb.front_end.arn
+  load_balancer_arn = aws_lb.frontend_alb.arn
   port              = "443"
   protocol          = "HTTPS"
   ssl_policy        = "ELBSecurityPolicy-TLS13-1-3-2021-06"
