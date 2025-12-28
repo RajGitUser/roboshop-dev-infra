@@ -30,19 +30,19 @@ GitHub
 
 Although specific files may vary, the overall architecture generally includes:
 
-┌─────────────────────────────────────────┐
-│ VPC, Subnets & Routing                   │
-├─────────────────────────────────────────┤
-│ Security Groups & Access Control         │
-├─────────────────────────────────────────┤
-│ Bastion + VPN or Access Layer            │
-├─────────────────────────────────────────┤
-│ Database Services (MySQL, MongoDB, etc.) │
-├─────────────────────────────────────────┤
-│ Backend Services (Cart, User, Payment)   │
-├─────────────────────────────────────────┤
-│ Frontend + Load Balancers                │
-└─────────────────────────────────────────┘
+
+VPC, Subnets & Routing
+
+Security Groups & Access Control
+
+Bastion + VPN or Access Layer
+
+Database Services (MySQL, MongoDB, etc.)
+
+Backend Services (Cart, User, Payment)
+
+Frontend + Load Balancers
+
 
 
 This segmentation ensures a secure and scalable environment suitable for development and testing.
